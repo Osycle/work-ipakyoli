@@ -14,6 +14,7 @@ $header-min-menu: 70px;
 	right: 0;
 	left: 0;
 	//position: fixed;
+	position: relative;
 	pointer-events: none;
 	//font-family: $font-family-1;
 	&:not([class*="bg-color"]){
@@ -35,7 +36,7 @@ $header-min-menu: 70px;
 	//position: relative;
 	height: 95px;
 	transition: height 0.3s ease-in-out 0.4s;
-	display: block;
+	display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;

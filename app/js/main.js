@@ -47,23 +47,7 @@
 			'</span>'
 		]
 
-		{
-			var items = $(".short-partners-items.owl-carousel").attr("data-owl-item") || null
-			$(".short-partners-items.owl-carousel").owlCarousel({
-				nav: true,
-				//items: 3,
-				dots: false,
-				dotsEach: true,
-				autoplay: true,
-				touchDrag: checkSm(),
-				responsive:{
-					0:{items:2},
-					991:{items: items || 3}
-				},
-				navText : owlBtn,
-				margin: 30
-			});
-		}
+
 
 		$(".certifications-items.owl-carousel").owlCarousel({
 			nav: true,
@@ -74,10 +58,10 @@
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},
-				991:{items:3}
+				991:{items:4}
 			},
 			navText : owlBtn,
-			margin: 15
+			margin: 30
 		});
 
 		if( $(".owl-nav-style-1").length > 0 ){
@@ -174,14 +158,14 @@
 		if( $(".bnr-carousel .carousel-items figure").length ){
 			window.bnrCarousel = $(".bnr-carousel").children(".carousel-items").flickity({
 				imagesLoaded: true,
-				autoPlay: false,
+				autoPlay: 6000,
 				pauseAutoPlayOnHover: true,
 				arrowShape: "M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z",
 				initialIndex: 0,
 				friction: 0.5,
 				//selectedAttraction: 1,
-				prevNextButtons: false, //костыль с переключателями
-				draggable: true,
+				prevNextButtons: checkSm(),
+				draggable: !checkSm(),
 				wrapAround: true,
 				pageDots: true,
 				contain: false,
@@ -305,7 +289,6 @@
 		//var scene = $(".product-img");
 		$(".parallax-scene").map(function(i, el){
 			var parallaxInstance = new Parallax(el);
-			console.log(parallaxInstance);
 		})
 
 		//SCROLL

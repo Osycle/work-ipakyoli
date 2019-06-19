@@ -76,6 +76,7 @@
 
 
 		<!-- HEADER -->
+		<div class="header-hidden"></div>
 		<header id="header" class="hidden-sm hidden-xs" data-aos="fade">
 
 			<!-- HEADER TOP -->
@@ -96,15 +97,9 @@
 								<nav>
 									<ul>
 										<li><a href="index.html">Главная</a></li>
-										<li><a href="about.html">Продукция</a>
-											<ul class="sub-menu-1">
-												<li><a href="">Под меню</a></li>
-												<li><a href="">Под меню</a></li>
-												<li><a href="">Под меню</a></li>
-											</ul>
-										</li>
-										<li><a href="productions.html">Сертификаты</a></li>
-										<li><a href="services.html">Контакты</a></li>
+										<li><a href="productions.html">Продукция</a></li>
+										<li><a href="certifications.html">Сертификаты</a></li>
+										<li><a href="contacts.html">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -136,24 +131,9 @@
 		<!-- MIN MENU -->
 		<div id="min-menu" data-aos="fade">
 			<ul>
-				<li><a href="news.html">Новости</a></li>
-				<li><a href="about.html">О нас</a>
-					<ul>
-						<li><a href="history.html">История</a></li>
-						<li><a href="equipment.html">Оборудование</a></li>
-						<li><a href="gallery-photo.html">Фото галерея</a></li>
-						<li><a href="certifications.html">Сертификаты</a></li>
-						<li><a href="partners.html">Партнеры</a></li>
-					</ul>
-				</li>
-				<li><a href="productions.html">Продукция</a>
-					<ul>
-						<li><a href="productions.html">Продукция</a></li>
-						<li><a href="glasscontain.html">Оборудование</a></li>
-					</ul>
-				</li>
-				<li><a href="services.html">Лабораторные услуги</a></li>
-				<li><a href="vacancies.html">Вакансии</a></li>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="productions.html">Продукция</a></li>
+				<li><a href="certifications.html">Сертификаты</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 		</div>
@@ -481,91 +461,6 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
-  <script type="text/javascript">
-
-      var icon = {
-        path: 'M16.5,51s-16.5-25.119-16.5-34.327c0-9.2082,7.3873-16.673,16.5-16.673,9.113,0,16.5,7.4648,16.5,16.673,0,9.208-16.5,34.327-16.5,34.327zm0-27.462c3.7523,0,6.7941-3.0737,6.7941-6.8654,0-3.7916-3.0418-6.8654-6.7941-6.8654s-6.7941,3.0737-6.7941,6.8654c0,3.7916,3.0418,6.8654,6.7941,6.8654z',
-        anchor: new google.maps.Point(16.5, 51),
-        fillColor: '#ef1937',
-        fillOpacity: 1,
-        strokeWeight: 0,
-        scale: 0.9
-      };
-
-		  var map;
-	    function initialize() {
-	    	
-	      var mapOptions = {
-	        mapTypeId: google.maps.MapTypeId.ROADMAP,
-	        mapTypeControl: true,
-	        zoom: 14,
-	        zoomControl: true,
-	        zoomControlOptions: {
-	          style: google.maps.ZoomControlStyle.DEFAULT,
-	          position: google.maps.ControlPosition.DEFAULT
-	        },
-	        panControl: true,
-	        panControlOptions: {
-	          position: google.maps.ControlPosition.LEFT_TOP
-	        },
-	        streetViewControl: true,
-	        scaleControl: true,
-	        overviewMapControl: true,
-	        center: new google.maps.LatLng("41.35765", "69.354354343")
-	      };
-
-
-	      mapContainer = document.getElementById('map-canvas-1') || null;
-	      if( !mapContainer ) 
-	      	return;
-
-
-	      map = new google.maps.Map(mapContainer, mapOptions);
-	     	map.setOptions({
-	        //styles: mapStyles,
-	        disableDefaultUI: true
-	      });
-
-        window.infowindow = new google.maps.InfoWindow();
-        var marker, i;
-
-        var locations = [
-		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.354354343],
-		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.364354343],
-		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Bondi Beach</h5></div>', 41.35765, 69.364354343]
-		    ];
-       for (i = 0; i < locations.length; i++) {
-          marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-		        map: map,
-		        icon: icon,
-		        title: 'marker'
-          });
-          google.maps.event.addListener(marker, 'click', (function (marker, i) {
-            return function () {
-              infowindow.setContent(locations[i][0]);
-              infowindow.open(map, marker);
-            }
-          })(marker, i));
-              infowindow.setContent(locations[0][0]);
-              infowindow.open(map, marker);
-        }
-
-	    }
-	    initialize();
-	    google.maps.event.addDomListener(window, 'load', initialize);
-
-
-	    function checkResize() {
-	      var center = map.getCenter();
-	      google.maps.event.trigger(map, 'resize');
-	      map.setCenter(center);
-	    }
-
-	    window.onresize = checkResize;
-	  
-  </script>
 </body>
 
 </html>
