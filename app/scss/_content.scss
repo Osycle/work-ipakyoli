@@ -280,8 +280,15 @@ figcaption{
 		}
 		h1{
 			@media (min-width: 992px) {
+				text-indent: -60px;
+			}
+			@media (min-width: 1200px) {
+				text-indent: -90px;
+			}
+			@media (min-width: 1400px) {
 				text-indent: -120px;
 			}
+
 			font-size: em(120);
 			text-shadow:  0 0 30px rgba(black, 0.5);
 			font-weight: 900;
@@ -557,7 +564,7 @@ figcaption{
 		padding: 30px 15px;
 		align-items: center;
 		transition: all 0.3s ease;
-		opacity: 0.5;
+		
 	}
 	figure{
 		@media (max-width: 991px) {
@@ -606,8 +613,10 @@ figcaption{
 	img{
 		//height: 120px;
 		//filter: brightness(0%);
-		filter: grayscale(1);
-    filter: saturate(0%) brightness(60%);
+
+		//filter: grayscale(1);
+    //filter: saturate(0%) brightness(60%);
+
     transition: all 0.3s ease;
     //background-size: contain;
 	}
@@ -981,3 +990,74 @@ figcaption{
 }
 
 
+
+
+.icm.icm-mail{
+	font-size: 13px;
+}
+.icm-phone{
+	&:before{
+		transform: rotate(45deg);
+		display: inline-block;
+	}
+}
+//contacts
+.contacts-info{
+	.wrapper{
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0 0 35px 0 rgba(black, 0.25);
+		max-width: 740px;
+		@media (max-width: 991px) {
+			flex-direction: column;
+		}
+	}
+	.info-box{
+		width: 100%;
+		padding: 50px 60px;
+		background-color: white;
+		&:nth-child(even){
+			padding: 50px 35px;
+			width: 80%;
+			color: #fffefe;
+			background-color: #474747;
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+		}
+		.flex{
+			margin: 20px 0;
+			@media (max-width: 991px) {
+				display: block;
+			}
+		}
+		.text{
+		}
+	}
+	.item{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.icon-content{
+		font-size: 20px;
+		color: #a5a5a5;
+		.icm-phone{
+			margin-top: -10px;
+		}
+		.icm{
+			width: 30px;
+			display: inline-block;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	@media (min-width: 992px) {
+    margin-bottom: -200px;
+    margin-top: 80px;
+    z-index: 1;
+    position: relative;
+
+	}
+}
