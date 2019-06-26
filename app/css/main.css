@@ -9490,7 +9490,6 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #cecece;
   background-color: white;
   padding: 30px 15px;
   -webkit-box-align: center;
@@ -9553,15 +9552,21 @@ figcaption {
   list-style-position: outside;
   margin-bottom: 20px; }
 
-.short-partners-items figure:hover .wrapper {
-  background-color: #1e1e1e;
-  color: white;
-  opacity: 1; }
-
-.short-partners-items figure:hover .img, .short-partners-items figure:hover img {
-  opacity: 1;
-  -webkit-filter: none;
-  filter: none; }
+.short-partners-items figure {
+  position: relative; }
+  .short-partners-items figure .wrapper {
+    background-color: #1e1e1e;
+    color: white;
+    opacity: 1; }
+  .short-partners-items figure .img, .short-partners-items figure img {
+    opacity: 1;
+    -webkit-filter: none;
+    filter: none; }
+  .short-partners-items figure:hover {
+    z-index: 1; }
+    .short-partners-items figure:hover .wrapper {
+      -webkit-box-shadow: 0 0 25px -3px black;
+      box-shadow: 0 0 25px -3px black; }
 
 .productions {
   background-image: url("../img/bg/bg-productions.jpg");
