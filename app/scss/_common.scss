@@ -633,7 +633,10 @@ table {
 	}
 	&.reverse{
 		&:not([class*="bg-color"]){
-			background-color: $color-2;
+			background-image: none;
+			background-color: $color-gray-4;
+			border-radius: 15px;
+			font-weight: 400;
 		}
 		&:not(.changecolor-none):hover{
 			background-color: darken($color-3, 10%);
